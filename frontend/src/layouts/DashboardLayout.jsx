@@ -79,7 +79,8 @@ const DashboardLayout = ({ children }) => {
                 <header className="h-24 flex items-center justify-between px-10 shrink-0">
                     <h2 className="text-3xl font-bold text-white tracking-tight">
                         {location.pathname === '/' ? 'Dashboard' :
-                            location.pathname.substring(1).charAt(0).toUpperCase() + location.pathname.slice(2)}
+                            location.pathname.startsWith('/task/') ? 'Task Details' :
+                                location.pathname.substring(1).charAt(0).toUpperCase() + location.pathname.slice(2)}
                     </h2>
 
                     <div className="flex items-center gap-6">

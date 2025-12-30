@@ -12,7 +12,7 @@ const TaskRow = ({ task, onToggleStatus }) => {
     };
 
     return (
-        <div className="bg-[#1e202e] p-4 rounded-2xl flex items-center justify-between group hover:bg-[#252836] transition-colors mb-3 border border-gray-800/30">
+        <div className="bg-[#1e202e] overflow-hidden p-4 rounded-2xl flex items-center justify-between group hover:bg-[#252836] transition-colors mb-3 border border-gray-800/30">
             <div className="flex items-center gap-4">
                 <button
                     onClick={() => onToggleStatus(task._id, task.status)}
