@@ -56,7 +56,7 @@ const Dashboard = () => {
             {/* Header Actions */}
             <div className="flex justify-between items-end mb-8">
                 <div>
-                    <h1 className="text-3xl font-bold text-white mb-1">Dashboard</h1>
+                    <h1 className="text-3xl font-bold text-white mb-1">Overview</h1>
                     <p className="text-gray-400">Overview of your productivity</p>
                 </div>
                 <button

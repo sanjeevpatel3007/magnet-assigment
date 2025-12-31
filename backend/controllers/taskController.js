@@ -65,9 +65,7 @@ const getTasks = async (req, res) => {
     }
 };
 
-// @desc    Get task by ID
-// @route   GET /api/tasks/:id
-// @access  Private
+
 const getTaskById = async (req, res) => {
     try {
         const task = await Task.findById(req.params.id)
@@ -131,16 +129,13 @@ const updateTask = async (req, res) => {
     }
 };
 
-// @desc    Delete task
-// @route   DELETE /api/tasks/:id
-// @access  Private
+
 const deleteTask = async (req, res) => {
     try {
         const task = await Task.findById(req.params.id);
 
         if (task) {
-            // Check permissions: Admin or Creator (Usually users can't delete assigned tasks unless configured)
-            // Let's allow Admin and Creator to delete.
+
             if (
                 req.user.role === 'admin' ||
                 task.createdBy.toString() === req.user._id.toString()
